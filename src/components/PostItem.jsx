@@ -8,7 +8,7 @@ export default function PostItem({ post, number }) {
 				<h3>
 					{number}. {post.title}
 				</h3>
-				<p>{post.body}</p>
+				<p>{post.text}</p>
 				<div className={styles.post__btns}>
 					<button>Delete</button>
 				</div>
