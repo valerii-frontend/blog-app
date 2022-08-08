@@ -12,3 +12,13 @@
 	color: #333;
 	background-color: #909090;
 }
+h1 {
+	margin: 2rem 0 1rem 0;
+}
+h2 {
+	margin: 1rem 0;
+}
+h3 {
+	margin: 1rem 0;
+	text-align: center;
+}

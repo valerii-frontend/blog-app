@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./PostItem.module.css";
 import Button from "./UI/Button/Button";
 
-export default function PostItem({ post, number }) {
+export default function PostItem({ post, number, remove }) {
 	return (
 		<div className={styles.post}>
 			<div className={styles.content}>
@@ -10,7 +10,7 @@ export default function PostItem({ post, number }) {
 					{number}. {post.title}
 				</h3>
 				<p>{post.text}</p>
-				<Button>Delete</Button>
+				<Button onClick={() => remove(post)}>Delete</Button>
 			</div>
 		</div>
 	);
