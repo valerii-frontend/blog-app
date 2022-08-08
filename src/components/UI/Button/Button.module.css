@@ -4,4 +4,6 @@
 	color: #272727;
 	text-align: center;
 	cursor: pointer;
+	width: 30%;
+	border: 1px solid #333;
 }

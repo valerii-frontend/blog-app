@@ -1,6 +1,4 @@
 import { useState } from "react";
-import Button from "./components/UI/Button/Button";
-import Input from "./components/UI/Input/Input";
 
 import "./App.css";
 

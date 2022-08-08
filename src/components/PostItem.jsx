@@ -1,17 +1,16 @@
 import React from "react";
 import styles from "./PostItem.module.css";
+import Button from "./UI/Button/Button";
 
 export default function PostItem({ post, number }) {
 	return (
 		<div className={styles.post}>
-			<div className={styles.post__content}>
+			<div className={styles.content}>
 				<h3>
 					{number}. {post.title}
 				</h3>
 				<p>{post.text}</p>
-				<div className={styles.post__btns}>
-					<button>Delete</button>
-				</div>
+				<Button>Delete</Button>
 			</div>
 		</div>
 	);
