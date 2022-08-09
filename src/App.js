@@ -5,6 +5,7 @@ import "./App.css";
 import PostList from "./components/PostList";
 import PostForm from "./components/PostForm";
 import Select from "./components/UI/Select/Select";
+import Input from "./components/UI/Input/Input";
 
 function App() {
 	const [posts, setPosts] = useState([
@@ -12,12 +13,19 @@ function App() {
 		{ id: 2, title: "React", description: "C React is the JavaScript library" },
 		{ id: 3, title: "Angular", description: "B Angular is the JavaScript framework" },
 	]);
-	const [selectedSort, setSelectedSort] = useState('')
-
+	const [selectedSort, setSelectedSort] = useState('');
+	const [search, setSearch] = useState('');
 
 	const createPost = (newPost) => {
 		setPosts([...posts, newPost]);
 	};
+
+	function getSortedPosts() {
+		if(selectedSort) {
+			return [...posts].sort((a,b)=>a[selectedSort].localeCompare(b[selectedSort]))
+		}
+		return posts;
+	}
 
 	const removePost = (post) => {
 		setPosts(posts.filter((p) => p.id !== post.id));
@@ -25,12 +33,15 @@ function App() {
 
 	const sortPosts=(sort)=>{
 		setSelectedSort(sort);
-		setPosts([...posts].sort((a,b)=>a[sort].localeCompare(b[sort])))
-
 	}
+
+	const sortedPosts = getSortedPosts();
+
 	return (
 		<div className='App'>
 			<PostForm create={createPost} />
+			<Input placeholder='Search...'
+				   value={search} onChange={e=> setSearch(e.target.value)}/>
 			<Select defaultValue='Sort by'
 					value={selectedSort}
 					onChange={sortPosts}
@@ -40,7 +51,7 @@ function App() {
 			]}
 			/>
 			{posts.length !== 0 ?
-				<PostList posts={posts} title='Posts list' remove={removePost} /> :
+				<PostList posts={sortedPosts} title='Posts list' remove={removePost} /> :
 				<h3>Have no posts!</h3>
 			}
 		</div>
