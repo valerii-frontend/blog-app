@@ -11,7 +11,7 @@ export default function PostFilter({filter,setFilter}) {
 			onChange={selectedSort => setFilter({...filter,sort:selectedSort})}
 			options={[
 				{ value: "title", name: "By name" },
-				{ value: "description", name: "By description" },
+				{ value: "text", name: "By description" },
 			]}
 		/>
 	</>;

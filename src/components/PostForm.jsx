@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import Input from "./UI/Input/Input";
 import Button from "./UI/Button/Button";
 
-import styles from "./PostForm.module.css";
-
 export default function PostForm({ create }) {
 	const [post, setPost] = useState({ title: "", text: "" });
 	const addNewPost = (e) => {
@@ -19,7 +17,7 @@ export default function PostForm({ create }) {
 	return (
 		<>
 			<h1>Add new post</h1>
-			<form className={styles.form}>
+			<form>
 				<Input
 					type='text'
 					placeholder='post name'

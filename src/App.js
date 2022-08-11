@@ -5,19 +5,22 @@ import "./App.css";
 import PostList from "./components/PostList";
 import PostForm from "./components/PostForm";
 import PostFilter from "./components/PostFilter";
+import Modal from "./components/UI/Modal/Modal";
+import Button from "./components/UI/Button/Button";
 
 
 function App() {
 	const [posts, setPosts] = useState([
-		{ id: 1, title: "JavaScript", description: "ccc JavaScript is a programming language" },
-		{ id: 2, title: "React", description: "aaa React is the JavaScript library" },
-		{ id: 3, title: "Angular", description: "bbb Angular is the JavaScript framework" },
+		{ id: 1, title: "JavaScript", text: "ccc JavaScript is a programming language" },
+		{ id: 2, title: "React", text: "aaa React is the JavaScript library" },
+		{ id: 3, title: "Angular", text: "bbb Angular is the JavaScript framework" },
 	]);
 
 	const [filter,setFilter]=useState({sort:'',query:''})
 
+	const [modal,setModal]=useState(false);
+
 	const sortedPosts = useMemo(() => {
-		console.log("func");
 		if (filter.sort) {
 			return [...posts].sort((a, b) => a[filter.sort].localeCompare(b[filter.sort]));
 		}
@@ -32,6 +35,7 @@ function App() {
 
 	const createPost = (newPost) => {
 		setPosts([...posts, newPost]);
+		setModal(false)
 	};
 
 	const removePost = (post) => {
@@ -41,13 +45,12 @@ function App() {
 
 	return (
 		<div className='App'>
-			<PostForm create={createPost} />
+			<Button onClick={()=>setModal(true)}>Add new post</Button>
 			<PostFilter filter={filter} setFilter={setFilter}/>
-			{sortedSearchPosts.length !== 0 ? (
-				<PostList posts={sortedSearchPosts} title='Posts list' remove={removePost} />
-			) : (
-				<h3>Have no posts!</h3>
-			)}
+			<PostList posts={sortedSearchPosts} title='Posts list' remove={removePost} />
+			<Modal visible={modal} setVisible={setModal}>
+				<PostForm create={createPost} />
+			</Modal>
 		</div>
 	);
 }

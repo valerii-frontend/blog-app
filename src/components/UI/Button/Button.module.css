@@ -1,9 +1,12 @@
 .btn {
 	padding: 0.5rem 1rem;
-	background-color: gold;
+	background-color: var(--primary);
 	color: #272727;
 	text-align: center;
 	cursor: pointer;
 	width: 30%;
 	border: 1px solid #333;
+}
+.btn:hover {
+	background-color: var(--primary-dark);
 }

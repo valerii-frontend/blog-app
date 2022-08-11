@@ -9,7 +9,7 @@ export default function PostItem({ post, number, remove }) {
 				<h3>
 					{number}. {post.title}
 				</h3>
-				<p>{post.description}</p>
+				<p>{post.text}</p>
 				<Button onClick={() => remove(post)}>Delete</Button>
 			</div>
 		</div>

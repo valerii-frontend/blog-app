@@ -1,6 +1,10 @@
 import PostItem from "./PostItem";
 
 export default function PostList({ posts, title, remove }) {
+
+	if(!posts.length) {
+		return <h3>Have no posts!</h3>
+	}
 	return (
 		<>
 			<h2>{title}</h2>
