@@ -1,0 +1,38 @@
+.spinner {
+	width: 200px;
+	height: 200px;
+	border: 10px var(--primary-dark) dashed;
+	border-radius: 50%;
+	animation: rotate 2s linear infinite;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 30px;
+}
+.spinner span {
+	animation: rotate2 2s linear infinite;
+	font-size: 2rem;
+	font-weight: bold;
+	color: var(--primary);
+}
+.wrap {
+	display: flex;
+	justify-content: center;
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+@keyframes rotate2 {
+	from {
+		transform: rotate(360deg) scale(1);
+	}
+	to {
+		transform: rotate(0deg) scale(1.5);
+	}
+}

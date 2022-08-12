@@ -3,7 +3,7 @@ import Input from "./UI/Input/Input";
 import Button from "./UI/Button/Button";
 
 export default function PostForm({ create }) {
-	const [post, setPost] = useState({ title: "", text: "" });
+	const [post, setPost] = useState({ title: "", body: "" });
 	const addNewPost = (e) => {
 		e.preventDefault();
 		const newPost = {
@@ -11,7 +11,7 @@ export default function PostForm({ create }) {
 			id: Date.now(),
 		};
 		create(newPost);
-		setPost({ title: "", text: "" });
+		setPost({ title: "", body: "" });
 	};
 
 	return (
@@ -27,8 +27,8 @@ export default function PostForm({ create }) {
 				<Input
 					type='text'
 					placeholder='post text'
-					value={post.text}
-					onChange={(e) => setPost({ ...post, text: e.target.value })}
+					value={post.body}
+					onChange={(e) => setPost({ ...post, body: e.target.value })}
 				/>
 				<Button onClick={addNewPost}>Add</Button>
 			</form>

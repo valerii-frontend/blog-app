@@ -1,0 +1,39 @@
+.loadbar {
+	width: 400px;
+	margin: 50px auto;
+	height: 40px;
+	box-shadow: 0 0 0 5px var(--primary-dark);
+}
+.volume {
+	height: 40px;
+	width: 0;
+	background-color: var(--primary);
+	animation: width 1s linear;
+}
+.text {
+	font-size: 2rem;
+	text-align: center;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: var(--primary-light);
+	animation: text 300ms ease-in-out infinite alternate;
+}
+
+@keyframes width {
+	from {
+		width: 0;
+	}
+	to {
+		width: 400px;
+	}
+}
+@keyframes text {
+	from {
+		opacity: 0.5;
+		transform: scale(1);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1.2);
+	}
+}
