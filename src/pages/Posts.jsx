@@ -4,7 +4,6 @@ import PostList from "../components/PostList";
 import PostForm from "../components/PostForm";
 import PostFilter from "../components/PostFilter";
 import Modal from "../components/UI/Modal/Modal";
-import Button from "../components/UI/Button/Button";
 import { usePosts } from "../hooks/usePosts";
 import PostService from "../API/PostService";
 import LoadBar from "../components/UI/LoadBar/LoadBar";
@@ -60,7 +59,7 @@ function Posts() {
 
     return (
         <>
-        <div className='page-posts'>
+        <div className='page'>
             <PostFilter	filter={filter}	setFilter={setFilter} setModal={setModal}/>
 
                 {content}
