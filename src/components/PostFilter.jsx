@@ -1,10 +1,12 @@
 import React from "react";
 import Input from "./UI/Input/Input";
 import Select from "./UI/Select/Select";
+import Button from "./UI/Button/Button";
+import styles from './PostFilter.module.css'
 
-export default function PostFilter({ filter, setFilter }) {
+export default function PostFilter({ filter, setFilter,setModal }) {
 	return (
-		<>
+		<div className={styles.filter}>
 			<Input
 				placeholder='Search...'
 				value={filter.query}
@@ -19,6 +21,7 @@ export default function PostFilter({ filter, setFilter }) {
 					{ value: "body", name: "By description" },
 				]}
 			/>
-		</>
+			<Button onClick={() => setModal(true)}>Add new post</Button>
+		</div>
 	);
 }

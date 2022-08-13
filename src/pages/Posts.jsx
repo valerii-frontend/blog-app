@@ -61,11 +61,9 @@ function Posts() {
     return (
         <>
         <div className='page-posts'>
-            <Button onClick={() => setModal(true)}>Add new post</Button>
+            <PostFilter	filter={filter}	setFilter={setFilter} setModal={setModal}/>
 
-            <PostFilter	filter={filter}	setFilter={setFilter}/>
-
-            {content}
+                {content}
 
             <Modal visible={modal} setVisible={setModal}>
                 <PostForm create={createPost} lastPostId={sortAndSearchPosts[sortAndSearchPosts.length -1]}/>

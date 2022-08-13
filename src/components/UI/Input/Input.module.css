@@ -5,6 +5,7 @@
 	border: 0;
 	background: var(--secondary);
 	box-shadow: 0 0 5px 0 var(--primary-dark);
+	border-radius: var(--radius);
 }
 .input:focus {
 	outline: 0;

@@ -9,6 +9,7 @@
     backdrop-filter: blur(3px);
     color: var(--text);
 
+
 }
 
 .modal.active {
@@ -19,6 +20,7 @@
 .content {
     padding: 2rem   ;
     min-width: 280px;
-    box-shadow: 0 0 7px 0 black;
+    box-shadow: 0 0 7px 0 #333;
     background-color: var(--primary-light);
+    border-radius: var(--radius);
 }

@@ -10,7 +10,10 @@ export default function PostItem({ post, number, remove }) {
 					{number}. {post.title}
 				</h3>
 				<p>{post.body}</p>
-				<Button onClick={() => remove(post)}>Delete</Button>
+				<div className={styles.btns}>
+					<Button onClick={() => remove(post)}>Delete</Button>
+					<Button onClick={() => {}}>See more</Button>
+				</div>
 			</div>
 		</div>
 	);

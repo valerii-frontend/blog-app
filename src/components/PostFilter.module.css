@@ -1,0 +1,28 @@
+.btns {
+	display: flex;
+	justify-content: space-between;
+}
+.filter {
+	display: flex;
+	flex-wrap: wrap;
+}
+.filter input {
+	margin-bottom: 15px;
+	flex: 0 0 100%;
+}
+.filter select{
+	margin-right: 15px;
+}
+.filter select,.filter button{
+	max-width: 150px;
+	flex: 0 0 150px;
+}
+@media (max-width: 390px) {
+	.filter select,.filter button{
+		max-width: 100%;
+		flex: 0 0 100%;
+	}
+	.filter select{
+		margin-bottom: 15px;
+	}
+}
