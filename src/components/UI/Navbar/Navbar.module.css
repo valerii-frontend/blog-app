@@ -9,8 +9,8 @@
     right: 0;
     padding: 1rem 0;
     list-style: none;
-    background: #333;
-    box-shadow: 0 2px 3px 3px #272727;
+    background: var(--dark);
+    box-shadow: 0 2px 3px 3px var(--text);
 }
 .nav li {
     margin-right: 30px;
@@ -21,10 +21,9 @@
 }
 
 .nav a {
-    color: var(--primary-light);
+    color: white;
     text-decoration: none;
 }
 .nav a:hover{
-    color: var(--primary-dark);
     text-decoration: underline;
 }

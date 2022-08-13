@@ -1,12 +1,13 @@
 .pagination {
     display: flex;
     justify-content: center;
-    background: #333;
+    flex: 0 1 auto;
+    background: var(--dark);
     padding: 20px 0;
     width: 100%;
-    box-shadow: 0 -2px 3px 3px #272727;
+    box-shadow: 0 -2px 3px 0px var(--text);
 }
-.pagination button {
+.btn {
     background-color: var(--primary-light);
     display: flex;
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
@@ -17,13 +18,14 @@
     margin-right: 5px;
     width: 32px;
     height: 32px;
+    border-radius: var(--radius);
     line-height: 32px;
 }
-.pagination button:hover {
+.btn:hover {
     background-color: var(--primary);
     cursor: pointer;
 }
-.pagination button.active {
+.active {
     background-color: var(--primary);
     font-weight: bold;
 }

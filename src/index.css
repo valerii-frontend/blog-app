@@ -1,9 +1,19 @@
+/*:root{*/
+/*  --primary: gold;*/
+/*  --primary-dark: #ffa200;*/
+/*  --primary-light: #f4e0b8;*/
+/*  --secondary: #def3ff;*/
+/*  --text:#272727;*/
+/*}*/
 :root{
-  --primary: gold;
-  --primary-dark: #ffa200;
-  --primary-light: #f4e0b8;
+  --primary: rgba(24,141,252,0.8);
+  --primary-dark: #1667b7;
+  --primary-light: rgba(147,202,255,0.5);
+  --primary-light-hover: rgba(147,202,255,0.8);
   --secondary: #def3ff;
   --text:#272727;
+  --dark: rgba(52,52,52,0.9);
+  --radius:4px;
 }
 body {
   margin: 0;

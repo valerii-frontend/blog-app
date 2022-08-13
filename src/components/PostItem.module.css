@@ -3,9 +3,13 @@
 	margin-bottom: 1rem;
 	background-color: var(--primary-light);
 	color: var(--text);
-	box-shadow: 0 0 7px 0 black;
+	box-shadow: 0 0 5px 0 var(--primary-dark);
+	border-radius: var(--radius);
 }
-
+.post:hover {
+	background-color: var(--primary-light-hover);
+	cursor:pointer;
+}
 .content p {
 	margin: 1rem 0;
 }

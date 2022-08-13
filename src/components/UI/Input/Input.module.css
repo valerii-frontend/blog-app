@@ -2,13 +2,14 @@
 	width: 100%;
 	padding: 0.5rem 1rem;
 	margin: 0.5rem 0;
-	border: 1px solid #333;
+	border: 0;
 	background: var(--secondary);
+	box-shadow: 0 0 5px 0 var(--primary-dark);
 }
 .input:focus {
 	outline: 0;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 10%);
-	background-color: var(--primary);
+	background-color: var(--primary-light);
+	box-shadow: 0 0 3px 2px var(--primary-dark);
 }
 .input:focus::placeholder {
 	opacity: 0;

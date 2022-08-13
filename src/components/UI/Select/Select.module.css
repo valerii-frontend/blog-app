@@ -1,4 +1,11 @@
 .select {
 	background-color: var(--primary);
 	padding: 0.45rem 0.9rem;
+	border: 0;
+	box-shadow: 0 0 5px 0 var(--primary-dark);
+	border-radius: var(--radius);
+	cursor: pointer;
+}
+.select:focus {
+	outline: none;
 }

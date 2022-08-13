@@ -1,11 +1,14 @@
 .btn {
 	padding: 0.5rem 1rem;
 	background-color: var(--primary);
-	color: #272727;
+	color: var(--text);
 	text-align: center;
 	cursor: pointer;
 	width: 30%;
-	border: 1px solid #333;
+	border: 0;
+	color: white;
+	box-shadow: 0 0 5px 0 var(--primary-dark);
+	border-radius: var(--radius);
 }
 .btn:hover {
 	background-color: var(--primary-dark);
