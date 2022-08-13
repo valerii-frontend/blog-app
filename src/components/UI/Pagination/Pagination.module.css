@@ -8,7 +8,7 @@
     box-shadow: 0 -2px 3px 0px var(--text);
 }
 .btn {
-    background-color: var(--primary-light);
+    background-color: var(--primary-light-hover);
     display: flex;
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
     font-size: 16px;
@@ -28,4 +28,5 @@
 .active {
     background-color: var(--primary);
     font-weight: bold;
+    color: white;
 }
