@@ -1,0 +1,30 @@
+
+.nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem 0;
+    list-style: none;
+    background: #333;
+    box-shadow: 0 2px 3px 3px #272727;
+}
+.nav li {
+    margin-right: 30px;
+    text-align: center;
+ }
+.nav li:last-child{
+    margin-right: 0;
+}
+
+.nav a {
+    color: var(--primary-light);
+    text-decoration: none;
+}
+.nav a:hover{
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
