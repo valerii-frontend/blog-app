@@ -2,18 +2,17 @@ import React, { useState } from "react";
 import Input from "./UI/Input/Input";
 import Button from "./UI/Button/Button";
 
-export default function PostForm({ create }) {
+export default function PostForm({ create,lastPostId }) {
 	const [post, setPost] = useState({ title: "", body: "" });
 	const addNewPost = (e) => {
 		e.preventDefault();
 		const newPost = {
 			...post,
-			id: Date.now(),
+			id: lastPostId?.id+1,
 		};
 		create(newPost);
 		setPost({ title: "", body: "" });
 	};
-
 	return (
 		<>
 			<h1>Add new post</h1>
