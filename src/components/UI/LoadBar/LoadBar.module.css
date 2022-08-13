@@ -15,7 +15,7 @@
 	text-align: center;
 	font-weight: bold;
 	text-transform: uppercase;
-	color: var(--primary-light);
+	color: var(--primary-dark);
 	display: flex;
 	justify-content: center;
 }
