@@ -1,6 +1,7 @@
 .pagination {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     flex: 0 1 auto;
     background: var(--dark);
     padding: 20px 0;
@@ -15,7 +16,7 @@
     align-items: center;
     justify-content: center;
     border: 0;
-    margin-right: 5px;
+    margin: 0 5px 5px 0;
     width: 32px;
     height: 32px;
     border-radius: var(--radius);
