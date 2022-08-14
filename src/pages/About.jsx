@@ -6,17 +6,17 @@ const About = () => {
             <h1>About me</h1>
             <h2>My links</h2>
             <ul className={styles.list}>
-                <li><a href="mailto:v.lozghachov@gmail.com" target='_blank'>Email</a></li>
-                <li><a href="https://github.com/valerii-frontend" target='_blank'>GitHub</a></li>
+                <li><a href="mailto:v.lozghachov@gmail.com" target='_blank' rel='noopener'>Email</a></li>
+                <li><a href="https://github.com/valerii-frontend" target='_blank' rel='noopener'>GitHub</a></li>
                 <li><a href="https://www.linkedin.com/in/valerii-lozghachov">LinkedIn</a></li>
-                <li><a href="https://www.upwork.com/freelancers/~014ead3e287a0b68a3" target='_blank'>Upwork</a></li>
-                <li><a href="https://app.codesignal.com/profile/_valerii__" target='_blank'>CodeSignal</a></li>
-                <li><a href="https://t.me/the_earth_citizen" target='_blank'>Telegram</a></li>
+                <li><a href="https://www.upwork.com/freelancers/~014ead3e287a0b68a3" target='_blank' rel='noopener'>Upwork</a></li>
+                <li><a href="https://app.codesignal.com/profile/_valerii__" target='_blank' rel='noopener'>CodeSignal</a></li>
+                <li><a href="https://t.me/the_earth_citizen" target='_blank' rel='noopener'>Telegram</a></li>
             </ul>
             <h3>This project code</h3>
             <p>
                 <a href="https://github.com/valerii-frontend/react-practice"
-                   target='_blank'
+                   target='_blank' rel='noopener'
                   className={styles.link}>
                     Git repository link
                 </a>

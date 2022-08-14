@@ -10,9 +10,6 @@ import LoadBar from "../components/UI/LoadBar/LoadBar";
 import {useFetch} from "../hooks/useFetch";
 import {getPagesCount} from "../components/utils/pages";
 import Pagination from "../components/UI/Pagination/Pagination";
-import Select from "../components/UI/Select/Select";
-
-
 
 
 function Posts() {

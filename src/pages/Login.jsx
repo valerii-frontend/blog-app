@@ -4,7 +4,7 @@ import Button from "../components/UI/Button/Button";
 import {AuthContext} from "../context";
 
 const Login = () => {
-    const {isAuth,setIsAuth}= useContext(AuthContext);
+    const {setIsAuth}= useContext(AuthContext);
     const [enteredName,setEnteredName]= useState('');
     const [enteredPassword,setEnteredPassword]= useState('');
     const [loginError,setLoginError]= useState(false);

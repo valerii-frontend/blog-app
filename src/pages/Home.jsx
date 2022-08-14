@@ -8,7 +8,8 @@ const Home = () => {
             <br/>
             <p>
                 <strong>{`{JSON} Placeholder - `}</strong>
-                <a className={styles.link} href="https://jsonplaceholder.typicode.com/" target='_blank'>jsonplaceholder</a>
+                <a className={styles.link} href="https://jsonplaceholder.typicode.com/"
+                   target='_blank' rel='noopener'>jsonplaceholder</a>
             </p>
             <br/>
             <h3>Implementation</h3>
