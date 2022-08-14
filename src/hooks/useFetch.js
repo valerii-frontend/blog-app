@@ -4,7 +4,7 @@ export const useFetch = (callback) => {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState('');
     
-   async function fetching() {
+   async function fetching(id) {
         try {
             setIsLoading(true);
             await callback();

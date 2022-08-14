@@ -3,12 +3,14 @@
 	margin: 50px auto;
 	height: 40px;
 	box-shadow: 0 0 0 5px var(--primary-dark);
+	border-radius: var(--radius);
 }
 .volume {
 	height: 40px;
 	width: 0;
 	background-color: var(--primary);
 	animation: width 2s linear forwards;
+	border-radius: var(--radius);
 }
 .text {
 	font-size: 2rem;

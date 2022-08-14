@@ -8,18 +8,19 @@ import {AuthContext} from "./context";
 
 function App() {
 	const [isAuth,setIsAuth] = useState(false);
+	const[isLoading,setIsLoading] = useState(true);
 
 	useEffect(()=> {
-		if(sessionStorage.getItem('auth') === 'isAuth'){
+		if(sessionStorage.getItem('auth')){
 			setIsAuth(true);
-		} else {
-			setIsAuth(false);
 		}
-		},[isAuth,setIsAuth])
+		setIsLoading(false);
+		},[])
 	return (
 		<AuthContext.Provider value={{
 			isAuth,
-			setIsAuth
+			setIsAuth,
+			isLoading
 		}}>
 			<BrowserRouter>
 				<Navbar/>

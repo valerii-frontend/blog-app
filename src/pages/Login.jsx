@@ -14,7 +14,7 @@ const Login = () => {
     const login = e => {
         e.preventDefault();
         if(enteredName === 'root' && enteredName === 'root'){
-        sessionStorage.setItem('auth','isAuth');
+        sessionStorage.setItem('auth','1');
         setIsAuth(true);
         setLoginError(false);
         } else {

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import {useState, useEffect} from "react";
 
 import PostList from "../components/PostList";
 import PostForm from "../components/PostForm";
@@ -12,6 +12,8 @@ import {getPagesCount} from "../components/utils/pages";
 import Pagination from "../components/UI/Pagination/Pagination";
 
 
+
+
 function Posts() {
     //states
     const [posts, setPosts] = useState([]);
@@ -19,7 +21,7 @@ function Posts() {
     const [modal, setModal] = useState(false);
     const [totalPages, setTotalPages] = useState(0);
     const [limit, setLimit] = useState(10);
-    const [page, setPage] = useState(1);
+    const [page, setPage] = useState(sessionStorage.getItem('page'));
 
     //filter
     const sortAndSearchPosts = usePosts(posts, filter.sort, filter.query);
@@ -32,7 +34,7 @@ function Posts() {
 
     })
 
-    useEffect(() => {
+     useEffect(() => {
         fetchPosts();
     }, [page]);
 
@@ -47,29 +49,26 @@ function Posts() {
 
     const changePage = (page)=> {
         setPage(page);
-    }
-
-    // catch error
-    let content;
-    if (postError) {
-        content = postError && <h2> Error! {postError}</h2>;
-    } else {
-        content = isLoading?<LoadBar />:<PostList posts={sortAndSearchPosts} title='Posts list' remove={removePost} />;
+        sessionStorage.setItem('page',page);
     }
 
     return (
         <>
         <div className='page'>
+
             <PostFilter	filter={filter}	setFilter={setFilter} setModal={setModal}/>
 
-                {content}
+            {postError && <h2> Error! {postError}</h2>}
 
-            <Modal visible={modal} setVisible={setModal}>
-                <PostForm create={createPost} lastPostId={sortAndSearchPosts[sortAndSearchPosts.length -1]}/>
-            </Modal>
+            <PostList posts={sortAndSearchPosts} title='Posts list' remove={removePost} />
+
+            {isLoading && <LoadBar />}
 
         </div>
-    <Pagination changePage={changePage} page={page} totalPages={totalPages}/>
+        <Pagination changePage={changePage} page={page} totalPages={totalPages}/>
+        <Modal visible={modal} setVisible={setModal}>
+            <PostForm create={createPost} lastPostId={sortAndSearchPosts[sortAndSearchPosts.length -1]}/>
+        </Modal>
     </>
     );
 }

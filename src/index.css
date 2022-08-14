@@ -21,6 +21,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url('assets/bg-low.png') center/cover fixed no-repeat,var(--secondary);
 }
 
 #root {
@@ -29,7 +30,7 @@ body {
   min-height: 100vh;
   padding-top: 30px;
   color: var(--text);
-  background: url('assets/bg.webp') center/cover no-repeat,var(--secondary);
+  background: url('assets/bg.webp') center/cover fixed no-repeat,var(--secondary);
   overflow-x:hidden ;
 }
 .login {
