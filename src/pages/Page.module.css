@@ -1,0 +1,57 @@
+.list li {
+    margin-bottom: 0.5rem;
+}
+.list a,.link {
+    color: white;
+    background: var(--primary);
+    padding: 3px;
+    min-width: 100px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+}
+.list a:hover,.link:hover  {
+    background: var(--primary-dark);
+    transition: 0.3s;
+}
+.list a:hover {
+    transform: translateX(10px);
+}
+.link:hover {
+    transform: translateY(3px);
+}
+.help {
+    width: 48px;
+    height: 48px;
+    font-size: 2rem;
+    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.help span {
+    position: absolute;
+    font-size: 1rem;
+    top: 0;
+    left:150%;
+    width: 120px;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid var(--primary);
+    opacity: 0;
+    transition: 0.3s;
+    transform: translateY(100%);
+}
+.help:hover {
+    transition: 0.3s;
+    background: var(--primary-dark);
+}
+.help:hover span {
+    opacity: 1;
+    transition: 0.3s;
+    transform: translateY(0%);
+}
