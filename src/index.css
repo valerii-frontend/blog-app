@@ -32,6 +32,10 @@ body {
   background: url('assets/bg.webp') center/cover no-repeat,var(--secondary);
   overflow-x:hidden ;
 }
+.login {
+  max-width: 400px;
+  margin: 0 auto;
+}
 .page {
   max-width: 1200px;
   width: 100%;
