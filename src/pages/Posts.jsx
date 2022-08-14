@@ -10,6 +10,7 @@ import LoadBar from "../components/UI/LoadBar/LoadBar";
 import {useFetch} from "../hooks/useFetch";
 import {getPagesCount} from "../components/utils/pages";
 import Pagination from "../components/UI/Pagination/Pagination";
+import Select from "../components/UI/Select/Select";
 
 
 
@@ -35,8 +36,8 @@ function Posts() {
     })
 
      useEffect(() => {
-        fetchPosts();
-    }, [page]);
+        fetchPosts(limit,page);
+    }, [page,limit]);
 
     //add remove posts
     const createPost = (newPost) => {
@@ -51,18 +52,22 @@ function Posts() {
         setPage(page);
         sessionStorage.setItem('page',page);
     }
+    let content;
+    if(postError) {
+        content = <h2> Error! {postError}</h2>;
+    } else {
+        content = isLoading ?
+            <LoadBar />:
+            <PostList posts={sortAndSearchPosts} title={`Page #${page}`} remove={removePost} />
+    }
 
     return (
         <>
         <div className='page'>
+            <h1>Posts list</h1>
+            <PostFilter	filter={filter}	setFilter={setFilter} setModal={setModal} limit={limit} setLimit={setLimit} changePage={changePage}/>
 
-            <PostFilter	filter={filter}	setFilter={setFilter} setModal={setModal}/>
-
-            {postError && <h2> Error! {postError}</h2>}
-
-            <PostList posts={sortAndSearchPosts} title='Posts list' remove={removePost} />
-
-            {isLoading && <LoadBar />}
+            {content}
 
         </div>
         <Pagination changePage={changePage} page={page} totalPages={totalPages}/>

@@ -1,5 +1,8 @@
+:root {
+	--width:400px;
+}
 .loadbar {
-	width: 400px;
+	width: var(--width);
 	margin: 50px auto;
 	height: 40px;
 	box-shadow: 0 0 0 5px var(--primary-dark);
@@ -76,6 +79,11 @@
 		width: 0;
 	}
 	to {
-		width: 400px;
+		width: var(--width);
+	}
+}
+@media (max-width: 450px) {
+	:root {
+		--width:300px;
 	}
 }
