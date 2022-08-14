@@ -24,6 +24,7 @@ export default function PostFilter({ filter, setFilter,setModal,limit,setLimit,c
 			<Select value={limit}
 					onChange={value=>{
 						setLimit(value);
+						sessionStorage.setItem('quantity',value);
 						changePage(1);
 					}}
 					defaultValue='Quantity'

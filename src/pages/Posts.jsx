@@ -21,7 +21,12 @@ function Posts() {
     const [filter, setFilter] = useState({ sort: "", query: "" });
     const [modal, setModal] = useState(false);
     const [totalPages, setTotalPages] = useState(0);
-    const [limit, setLimit] = useState(10);
+    const [limit, setLimit] = useState(
+        sessionStorage.getItem('quantity')
+            ?
+        sessionStorage.getItem('quantity')
+            :
+            10);
     const [page, setPage] = useState(sessionStorage.getItem('page'));
 
     //filter
