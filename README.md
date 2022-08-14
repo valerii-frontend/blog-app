@@ -20,3 +20,12 @@
 - Creating a Form to Add a New Post
 - Creating a library of reusable <strong>UI</strong> components
 
+## Live preview
+
+[GitHub pages](https://valerii-frontend.github.io/react-practice/)
+
+## My links 
+
+- [LinkedIn](https://www.linkedin.com/in/valerii-lozghachov)
+- [CodeSignal](https://app.codesignal.com/profile/_valerii__)
+- [Email](v.lozghachov@gmail.com)
