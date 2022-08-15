@@ -24,7 +24,9 @@ function Posts() {
         sessionStorage.getItem('quantity')
             :
             10);
-    const [page, setPage] = useState(sessionStorage.getItem('page'));
+    const [page, setPage] = useState(
+        sessionStorage.getItem('page')?
+            sessionStorage.getItem('page'):1);
 
     //filter
     const sortAndSearchPosts = usePosts(posts, filter.sort, filter.query);
