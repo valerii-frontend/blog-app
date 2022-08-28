@@ -1,4 +1,4 @@
-# The Project using fake API
+# The Project using jsonplaceholder API
 [jsonplaceholder](https://jsonplaceholder.typicode.com/)
 ## Scripts
 
