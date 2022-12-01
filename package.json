@@ -1,6 +1,6 @@
 {
-  "homepage": "https://valerii-frontend.github.io/react-practice/",
-  "name": "react-practice",
+  "homepage": "https://valerii-frontend.github.io/blog-app/",
+  "name": "blog-app-with-api",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
